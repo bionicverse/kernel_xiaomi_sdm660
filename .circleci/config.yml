@@ -2,12 +2,10 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: archlinux:base-devel
+      - image: ghcr.io/tomyprs/builder:main
    steps:
       - run:
           command: |
-           curl -fsSL "https://repo.archlinuxcn.org/x86_64/glibc-linux4-2.33-4-x86_64.pkg.tar.zst" | bsdtar -C / -xvf -
-           pacman -Syu --needed --noconfirm wget base-devel xmlto inetutils bc cpio python-sphinx python-sphinx_rtd_theme graphviz imagemagick git python2 python zip xxd
            git config --global user.name "tomyprs"
            git config --global user.email "tomy.prs25@gmail.com"
            git config --global color.ui false
