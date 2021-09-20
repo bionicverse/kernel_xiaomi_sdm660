@@ -160,7 +160,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%s")
 	fi
 
 	msg "|| Cloning Anykernel ||"
-	git clone --depth 1 https://github.com/bionicverse/AnyKernel3.git -b stable
+	git clone --depth 1 https://github.com/bionicverse/AnyKernel3.git -b master
 	msg "|| Cloning libufdt ||"
 	git clone --depth=1 https://android.googlesource.com/platform/system/libufdt libufdt
 }
